@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Urbanización San José - Chincha. Lotes desde 90m² con título SUNARP, servicios básicos, parque y polideportivo. Inicial desde S/5,000 fraccionable en 3 meses. Financiamiento 48 cuotas.">
+    <meta name="keywords" content="terrenos chincha, lotes san jose, urbanizacion chincha, lotes 90m2, inversion inmobiliaria ica, realia grupo inmobiliario">
+    <title>Urbanización San José - Chincha | Lotes desde 90m² | Realia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+        
+        :root { --primary: #166534; }
+        
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .heading-font { font-family: 'Playfair Display', Georgia, serif; }
+
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,0.60)), url('images/hero-aereo.jpg');
+            background-size: cover;
+            background-position: center 30%;
+            background-attachment: scroll;
+        }
+
+        .property-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .property-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.12);
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to right, #166534, #4ade80);
+            border-radius: 3px;
+        }
+
+        .nav-scrolled {
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            background-color: rgba(255,255,255,0.97);
+            backdrop-filter: blur(12px);
+        }
+
+        .modal { animation: modalPop 0.3s ease forwards; }
+        @keyframes modalPop {
+            from { opacity: 0; transform: scale(0.95) translateY(20px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        .terrain-badge {
+            background: linear-gradient(135deg, #166534, #4ade80);
+            color: white;
+            font-size: 0.75rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-weight: 600;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 15px -3px rgb(16 185 129 / 0.35);
+        }
+
+        video {
+            max-width: 100%;
+            height: auto;
+            background: #000;
+        }
+
+        /* Responsive video container */
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            border-radius: 1.25rem;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- NAVBAR -->
+    <nav id="navbar" class="bg-white border-b border-gray-200 sticky top-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-5 sm:px-6">
+            <div class="flex justify-between items-center h-16 sm:h-20">
+                <div class="flex items-center gap-x-2.5">
+                    <div class="w-10 h-10 bg-emerald-800 rounded-xl flex items-center justify-center">
+                        <i class="fa-solid fa-mountain text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="font-bold text-xl sm:text-2xl tracking-tight text-emerald-900">San José</span>
+                        <span class="font-semibold text-xl sm:text-2xl tracking-tight text-emerald-600"> Chincha</span>
+                    </div>
+                </div>
+
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                    <a href="#terrenos" class="hover:text-emerald-700 transition-colors">Lotes</a>
+                    <a href="#proyecto" class="hover:text-emerald-700 transition-colors">El Proyecto</a>
+                    <a href="#ubicacion" class="hover:text-emerald-700 transition-colors">Ubicación</a>
+                    <a href="#promocion" class="hover:text-emerald-700 transition-colors">Promoción</a>
+                    <a href="#faq" class="hover:text-emerald-700 transition-colors">Preguntas</a>
+                </div>
+
+                <div class="hidden md:flex items-center gap-x-3">
+                    <a href="https://wa.me/51960591552?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20lotes%20en%20Urbanizaci%C3%B3n%20San%20Jos%C3%A9" 
+                       target="_blank" rel="noopener"
+                       class="flex items-center gap-x-2 px-5 py-2.5 text-sm font-semibold bg-emerald-700 hover:bg-emerald-800 text-white rounded-full transition-all">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-emerald-800">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t bg-white px-5 py-4">
+            <div class="flex flex-col gap-y-2 text-sm font-medium">
+                <a href="#terrenos" class="py-2.5 px-1 hover:text-emerald-700" onclick="closeMobile()">Lotes disponibles</a>
+                <a href="#proyecto" class="py-2.5 px-1 hover:text-emerald-700" onclick="closeMobile()">El Proyecto 3D</a>
+                <a href="#ubicacion" class="py-2.5 px-1 hover:text-emerald-700" onclick="closeMobile()">Ubicación y Plano</a>
+                <a href="#promocion" class="py-2.5 px-1 hover:text-emerald-700" onclick="closeMobile()">Promoción especial</a>
+                <a href="#faq" class="py-2.5 px-1 hover:text-emerald-700" onclick="closeMobile()">Preguntas frecuentes</a>
+                <a href="https://wa.me/51960591552?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20lotes" 
+                   target="_blank" rel="noopener"
+                   class="mt-3 flex items-center justify-center gap-x-2 py-3.5 bg-emerald-700 text-white rounded-full font-semibold">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Escribir por WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero-bg min-h-[90dvh] sm:min-h-[85dvh] flex items-center relative">
+        <div class="max-w-5xl mx-auto px-5 sm:px-6 text-white py-16">
+            <div class="max-w-2xl">
+                <div class="inline-flex items-center gap-x-2 bg-white/15 backdrop-blur-md px-4 py-1.5 rounded-full mb-5 border border-white/25">
+                    <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                    <span class="text-xs sm:text-sm font-medium tracking-wide">PROMOCIÓN FIESTAS PATRIAS 2026</span>
+                </div>
+                
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.08] tracking-tight heading-font">
+                    Tu lote en<br>Urbanización<br>San José
+                </h1>
+                <p class="mt-5 text-lg sm:text-xl md:text-2xl font-light text-white/90 max-w-lg leading-relaxed">
+                    Lotes desde <strong>90 m²</strong> en Chincha con habilitación urbana, servicios y título SUNARP. Inicial desde S/ 5,000 fraccionable.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row flex-wrap gap-3 mt-8">
+                    <button onclick="document.getElementById('terrenos').scrollIntoView({behavior:'smooth'})" 
+                            class="px-7 py-3.5 bg-white text-emerald-900 hover:bg-emerald-50 font-semibold rounded-full flex items-center justify-center gap-x-2.5 transition-all text-base shadow-xl">
+                        <span>Ver lotes disponibles</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                    
+                    <a href="https://wa.me/51960591552?text=Hola%2C%20me%20interesa%20un%20lote%20en%20San%20Jos%C3%A9%20Chincha" 
+                       target="_blank" rel="noopener"
+                       class="px-7 py-3.5 border-2 border-white/90 hover:bg-white/10 font-semibold rounded-full flex items-center justify-center gap-x-2.5 transition-all text-base backdrop-blur-sm">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>Hablar con un asesor</span>
+                    </a>
+                </div>
+                
+                <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-white/90">
+                    <div class="flex items-center gap-x-2">
+                        <i class="fa-solid fa-check-circle text-emerald-400"></i>
+                        <span>Título independizado</span>
+                    </div>
+                    <div class="flex items-center gap-x-2">
+                        <i class="fa-solid fa-check-circle text-emerald-400"></i>
+                        <span>48 cuotas sin intereses</span>
+                    </div>
+                    <div class="flex items-center gap-x-2">
+                        <i class="fa-solid fa-check-circle text-emerald-400"></i>
+                        <span>Inicial en 3 meses</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Trust bar -->
+        <div class="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur border-t py-3">
+            <div class="max-w-6xl mx-auto px-5">
+                <div class="flex flex-wrap justify-center md:justify-between items-center gap-x-6 gap-y-2 text-xs sm:text-sm text-emerald-900 font-medium">
+                    <div class="flex items-center gap-x-2"><i class="fa-solid fa-check-circle text-emerald-600"></i> Títulos SUNARP</div>
+                    <div class="flex items-center gap-x-2"><i class="fa-solid fa-check-circle text-emerald-600"></i> Financiamiento directo</div>
+                    <div class="flex items-center gap-x-2"><i class="fa-solid fa-check-circle text-emerald-600"></i> Parque + Polideportivo</div>
+                    <div class="flex items-center gap-x-2"><i class="fa-solid fa-check-circle text-emerald-600"></i> Visitas guiadas</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- LOTES SECTION -->
+    <section id="terrenos" class="max-w-7xl mx-auto px-5 sm:px-6 pt-14 pb-12">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-y-3 mb-8">
+            <div>
+                <span class="px-3.5 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold tracking-wider rounded-full">OPORTUNIDADES ACTUALES</span>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight heading-font text-emerald-950 mt-3">Lotes disponibles<br>ahora en San José</h2>
+            </div>
+            <p class="text-emerald-700 max-w-xs text-sm md:text-right">
+                Precios desde S/ 30,000 • Título listo • Visitas este fin de semana
+            </p>
+        </div>
+
+        <div id="properties-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+            <!-- Cards injected by JS -->
+        </div>
+
+        <div class="text-center mt-10">
+            <p class="text-sm text-gray-600">¿Quieres ver más opciones o agendar visita? 
+                <a href="https://wa.me/51960591552?text=Hola%2C%20quiero%20agendar%20una%20visita%20a%20San%20Jos%C3%A9" target="_blank" rel="noopener" class="text-emerald-700 font-semibold underline">Escríbenos por WhatsApp</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- VIDEO PROYECTO 3D -->
+    <section id="proyecto" class="bg-emerald-950 text-white py-14 sm:py-16">
+        <div class="max-w-6xl mx-auto px-5 sm:px-6">
+            <div class="text-center mb-8 sm:mb-10">
+                <span class="text-emerald-400 text-xs tracking-[2px] font-bold">VISIÓN DEL PROYECTO</span>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold heading-font tracking-tight mt-2">Así se verá tu urbanización</h2>
+                <p class="mt-3 text-emerald-200 max-w-2xl mx-auto text-sm sm:text-base">
+                    Render 3D oficial del proyecto terminado: casas, áreas verdes, polideportivo, parques y vías completamente habilitadas.
+                </p>
+            </div>
+            
+            <div class="video-wrapper max-w-4xl mx-auto">
+                <video 
+                    controls 
+                    playsinline
+                    poster="images/poster-3d.jpg"
+                    preload="metadata"
+                    class="w-full aspect-video object-cover">
+                    <source src="videos/proyecto-3d.mp4" type="video/mp4">
+                    Tu navegador no soporta video HTML5.
+                </video>
+            </div>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 max-w-4xl mx-auto text-center text-sm">
+                <div class="bg-white/5 rounded-2xl p-4 border border-white/10">
+                    <div class="text-2xl font-bold text-emerald-400">90m²+</div>
+                    <div class="text-emerald-200 mt-1">Área mínima</div>
+                </div>
+                <div class="bg-white/5 rounded-2xl p-4 border border-white/10">
+                    <div class="text-2xl font-bold text-emerald-400">Parque</div>
+                    <div class="text-emerald-200 mt-1">Recreativo</div>
+                </div>
+                <div class="bg-white/5 rounded-2xl p-4 border border-white/10">
+                    <div class="text-2xl font-bold text-emerald-400">Poli</div>
+                    <div class="text-emerald-200 mt-1">Deportivo</div>
+                </div>
+                <div class="bg-white/5 rounded-2xl p-4 border border-white/10">
+                    <div class="text-2xl font-bold text-emerald-400">48</div>
+                    <div class="text-emerald-200 mt-1">Cuotas s/ intereses</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLANO + UBICACIÓN -->
+    <section id="ubicacion" class="max-w-7xl mx-auto px-5 sm:px-6 py-14 sm:py-16">
+        <div class="text-center mb-10">
+            <span class="px-3.5 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold tracking-wider rounded-full">CONOCE EL PROYECTO</span>
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight heading-font text-emerald-950 mt-3">Plano de lotización y ubicación</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+            <!-- Plano -->
+            <div class="bg-white rounded-3xl overflow-hidden border border-gray-200 shadow-sm">
+                <div class="p-5 border-b">
+                    <h3 class="font-bold text-xl text-emerald-950">Plano de Lotización</h3>
+                    <p class="text-sm text-gray-600 mt-1">Lotes vendidos (rojo) y separados (verde)</p>
+                </div>
+                <div class="p-3 sm:p-4">
+                    <img src="images/plano-lotizacion.jpg" alt="Plano de lotización Urbanización San José" 
+                         class="w-full h-auto rounded-2xl object-contain max-h-[480px] mx-auto">
+                </div>
+            </div>
+
+            <!-- Ubicación -->
+            <div class="bg-white rounded-3xl overflow-hidden border border-gray-200 shadow-sm">
+                <div class="p-5 border-b">
+                    <h3 class="font-bold text-xl text-emerald-950">Ubicación estratégica</h3>
+                    <p class="text-sm text-gray-600 mt-1">A minutos de la Plaza de Armas de Chincha</p>
+                </div>
+                <div class="p-3 sm:p-4">
+                    <img src="images/ubicacion-mapa.jpg" alt="Mapa de ubicación Urbanización San José Chincha" 
+                         class="w-full h-auto rounded-2xl object-contain max-h-[480px] mx-auto">
+                </div>
+                <div class="px-5 pb-5 grid grid-cols-2 gap-3 text-sm">
+                    <div class="bg-emerald-50 rounded-xl p-3 text-center">
+                        <div class="font-bold text-emerald-800">7-8 min</div>
+                        <div class="text-emerald-600 text-xs">Plaza de Chincha</div>
+                    </div>
+                    <div class="bg-emerald-50 rounded-xl p-3 text-center">
+                        <div class="font-bold text-emerald-800">11-12 min</div>
+                        <div class="text-emerald-600 text-xs">Plaza Pueblo Nuevo</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fotos reales del terreno -->
+        <div class="mt-10">
+            <h3 class="text-xl font-bold text-emerald-950 mb-4 text-center">Estado actual del terreno</h3>
+            <div class="grid sm:grid-cols-2 gap-4 sm:gap-5">
+                <div class="rounded-2xl overflow-hidden shadow-md">
+                    <img src="images/terreno-1.jpg" alt="Lotes marcados Urbanización San José" class="w-full h-56 sm:h-64 object-cover">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-md">
+                    <img src="images/terreno-2.jpg" alt="Vista de los lotes con demarcación" class="w-full h-56 sm:h-64 object-cover">
+                </div>
+            </div>
+            <p class="text-center text-sm text-gray-500 mt-4">Lotes ya demarcados con piedras. Listos para que elijas el tuyo.</p>
+        </div>
+    </section>
+
+    <!-- PROMOCIÓN + VIDEO ASESORA -->
+    <section id="promocion" class="bg-gradient-to-b from-emerald-50 to-white py-14 sm:py-16">
+        <div class="max-w-6xl mx-auto px-5 sm:px-6">
+            <div class="text-center mb-8 sm:mb-10">
+                <span class="px-3.5 py-1 bg-red-100 text-red-700 text-xs font-bold tracking-wider rounded-full">PROMOCIÓN POR TIEMPO LIMITADO</span>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight heading-font text-emerald-950 mt-3">¿No tienes los S/ 5,000 de inicial?</h2>
+                <p class="mt-3 text-gray-600 max-w-xl mx-auto">
+                    Por Fiestas Patrias puedes fraccionar la inicial en <strong>3 meses sin intereses</strong>.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-6 lg:gap-8 items-start">
+                <!-- Video asesora -->
+                <div>
+                    <div class="video-wrapper">
+                        <video 
+                            controls 
+                            playsinline
+                            poster="images/poster-asesora.jpg"
+                            preload="metadata"
+                            class="w-full aspect-[9/16] sm:aspect-video object-cover max-h-[520px] mx-auto">
+                            <source src="videos/promo-asesora.mp4" type="video/mp4">
+                            Tu navegador no soporta video HTML5.
+                        </video>
+                    </div>
+                    <p class="text-center text-sm text-gray-500 mt-3">Escucha a nuestra asesora explicar la promoción</p>
+                </div>
+
+                <!-- Beneficios de la promo -->
+                <div class="space-y-4">
+                    <div class="bg-white rounded-2xl p-5 sm:p-6 border border-emerald-100 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-calendar-check text-emerald-700 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-emerald-950">Inicial en 3 meses</h4>
+                                <p class="text-gray-600 text-sm mt-1">Fracciona los S/ 5,000 sin intereses. Solo por este mes de promoción.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl p-5 sm:p-6 border border-emerald-100 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-hand-holding-dollar text-emerald-700 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-emerald-950">48 cuotas sin intereses</h4>
+                                <p class="text-gray-600 text-sm mt-1">Financiamiento directo. Cuotas mínimas desde S/ 640 mensuales.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl p-5 sm:p-6 border border-emerald-100 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-file-signature text-emerald-700 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-emerald-950">Título independizado</h4>
+                                <p class="text-gray-600 text-sm mt-1">Partida registral en SUNARP. Documentos listos para escriturar.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/51960591552?text=Hola%2C%20quiero%20aprovechar%20la%20promoci%C3%B3n%20de%20inicial%20en%203%20meses" 
+                       target="_blank" rel="noopener"
+                       class="whatsapp-btn mt-2 w-full flex items-center justify-center gap-x-3 bg-emerald-700 hover:bg-emerald-800 text-white font-bold py-4 rounded-2xl text-lg transition-all">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        <span>Quiero esta promoción</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Flyers de apoyo -->
+            <div class="grid sm:grid-cols-2 gap-5 mt-10">
+                <div class="rounded-2xl overflow-hidden shadow-md border border-gray-100">
+                    <img src="images/promo-inicial.jpg" alt="Promoción inicial en 3 meses" class="w-full h-auto object-cover">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-md border border-gray-100">
+                    <img src="images/promo-gratis.jpg" alt="Promoción Tu gratis tu lote" class="w-full h-auto object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section id="beneficios" class="bg-emerald-950 text-white py-14 sm:py-16">
+        <div class="max-w-6xl mx-auto px-5 sm:px-6">
+            <div class="text-center mb-10">
+                <span class="text-emerald-400 text-xs tracking-[2px] font-bold">LA DIFERENCIA</span>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold heading-font tracking-tight mt-2">Todo lo que incluye tu lote</h2>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div class="bg-white/5 backdrop-blur p-6 rounded-2xl border border-white/10">
+                    <div class="w-12 h-12 bg-emerald-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-file-contract text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl">Título independizado</h3>
+                    <p class="mt-2 text-emerald-200 text-sm">Partida registral en SUNARP. Listo para escriturar sin complicaciones.</p>
+                </div>
+                
+                <div class="bg-white/5 backdrop-blur p-6 rounded-2xl border border-white/10">
+                    <div class="w-12 h-12 bg-emerald-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-faucet-drip text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl">Servicios básicos</h3>
+                    <p class="mt-2 text-emerald-200 text-sm">Agua y luz contemplados en el proyecto de habilitación urbana.</p>
+                </div>
+                
+                <div class="bg-white/5 backdrop-blur p-6 rounded-2xl border border-white/10">
+                    <div class="w-12 h-12 bg-emerald-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-tree text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl">Parque recreativo</h3>
+                    <p class="mt-2 text-emerald-200 text-sm">Áreas verdes, juegos y espacios de esparcimiento para toda la familia.</p>
+                </div>
+
+                <div class="bg-white/5 backdrop-blur p-6 rounded-2xl border border-white/10">
+                    <div class="w-12 h-12 bg-emerald-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-futbol text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl">Polideportivo</h3>
+                    <p class="mt-2 text-emerald-200 text-sm">Cancha deportiva para fútbol y actividades recreativas.</p>
+                </div>
+
+                <div class="bg-white/5 backdrop-blur p-6 rounded-2xl border border-white/10">
+                    <div class="w-12 h-12 bg-emerald-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-archway text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl">Pórtico de ingreso</h3>
+                    <p class="mt-2 text-emerald-200 text-sm">Acceso controlado y segura para mayor tranquilidad.</p>
+                </div>
+
+                <div class="bg-white/5 backdrop-blur p-6 rounded-2xl border border-white/10">
+                    <div class="w-12 h-12 bg-emerald-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-hand-holding-heart text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl">Financiamiento flexible</h3>
+                    <p class="mt-2 text-emerald-200 text-sm">48 cuotas sin intereses + inicial fraccionable. Sin banca tradicional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="bg-white border-t py-14 sm:py-16">
+        <div class="max-w-3xl mx-auto px-5 sm:px-6">
+            <h2 class="text-center text-3xl sm:text-4xl font-bold heading-font tracking-tight mb-8">Preguntas frecuentes</h2>
+            
+            <div class="space-y-3">
+                <div class="border border-gray-200 rounded-2xl p-5">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center font-semibold text-left gap-4">
+                        <span>¿Los terrenos tienen título de propiedad?</span>
+                        <i class="fa-solid fa-chevron-down text-emerald-700 transition-transform"></i>
+                    </button>
+                    <div class="hidden mt-3 text-gray-600 text-sm leading-relaxed">
+                        Sí. Todos los lotes cuentan con partida registral inscrita en SUNARP y título de propiedad independizado. Te entregamos la documentación completa.
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-2xl p-5">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center font-semibold text-left gap-4">
+                        <span>¿Puedo fraccionar la inicial de S/ 5,000?</span>
+                        <i class="fa-solid fa-chevron-down text-emerald-700 transition-transform"></i>
+                    </button>
+                    <div class="hidden mt-3 text-gray-600 text-sm leading-relaxed">
+                        Sí. Por promoción de Fiestas Patrias puedes fraccionar la inicial en 3 meses <strong>sin intereses</strong>. Pregunta por las condiciones exactas al asesor.
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-2xl p-5">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center font-semibold text-left gap-4">
+                        <span>¿Cómo funciona el financiamiento de 48 cuotas?</span>
+                        <i class="fa-solid fa-chevron-down text-emerald-700 transition-transform"></i>
+                    </button>
+                    <div class="hidden mt-3 text-gray-600 text-sm leading-relaxed">
+                        Es financiamiento directo del propietario. No necesitas historial crediticio bancario. Cuotas desde aproximadamente S/ 640 mensuales (según el lote). Consulta el plan exacto.
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-2xl p-5">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center font-semibold text-left gap-4">
+                        <span>¿Puedo visitar los lotes antes de comprar?</span>
+                        <i class="fa-solid fa-chevron-down text-emerald-700 transition-transform"></i>
+                    </button>
+                    <div class="hidden mt-3 text-gray-600 text-sm leading-relaxed">
+                        ¡Claro! Organizamos visitas guiadas. Agenda por WhatsApp y te mostramos el terreno, el plano y las opciones disponibles en persona.
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-2xl p-5">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center font-semibold text-left gap-4">
+                        <span>¿Qué documentos necesito?</span>
+                        <i class="fa-solid fa-chevron-down text-emerald-700 transition-transform"></i>
+                    </button>
+                    <div class="hidden mt-3 text-gray-600 text-sm leading-relaxed">
+                        Solo tu DNI. Nosotros nos encargamos de la documentación legal, contrato de compraventa y trámites de independización.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO FINAL -->
+    <section id="contacto" class="max-w-5xl mx-auto px-5 sm:px-6 py-14 sm:py-16">
+        <div class="bg-gradient-to-br from-emerald-800 to-emerald-950 rounded-[2rem] sm:rounded-[2.5rem] p-8 sm:p-12 text-white">
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold heading-font tracking-tight leading-tight">¿Listo para asegurar tu lote?</h2>
+                    <p class="mt-4 text-lg text-emerald-100">Escríbenos ahora y un asesor te contactará en minutos con las opciones según tu presupuesto.</p>
+                    
+                    <a href="https://wa.me/51960591552?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20comprar%20un%20lote%20en%20San%20Jos%C3%A9" 
+                       target="_blank" rel="noopener"
+                       class="whatsapp-btn mt-6 inline-flex items-center justify-center gap-x-3 bg-white text-emerald-900 font-bold px-7 h-14 rounded-full text-lg shadow-xl hover:shadow-2xl transition-all">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        <span>Escribir por WhatsApp</span>
+                    </a>
+                    <p class="mt-3 text-xs text-emerald-300">Respuesta promedio: menos de 15 minutos • +51 960 591 552</p>
+                </div>
+                
+                <div>
+                    <form id="contact-form" onsubmit="handleContactForm(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div>
+                                <label class="text-xs tracking-wider font-medium text-emerald-200 block mb-1.5">NOMBRE</label>
+                                <input type="text" id="nombre" required 
+                                       class="w-full bg-white/10 border border-white/30 focus:border-white placeholder:text-white/50 text-white rounded-xl px-4 py-3 outline-none text-sm" 
+                                       placeholder="Tu nombre">
+                            </div>
+                            <div>
+                                <label class="text-xs tracking-wider font-medium text-emerald-200 block mb-1.5">TELÉFONO</label>
+                                <input type="tel" id="telefono" required 
+                                       class="w-full bg-white/10 border border-white/30 focus:border-white placeholder:text-white/50 text-white rounded-xl px-4 py-3 outline-none text-sm" 
+                                       placeholder="+51 9XX XXX XXX">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="text-xs tracking-wider font-medium text-emerald-200 block mb-1.5">¿QUÉ BUSCAS?</label>
+                            <select id="interes" class="w-full bg-white/10 border border-white/30 focus:border-white text-white rounded-xl px-4 py-3 outline-none text-sm">
+                                <option value="Lote para vivienda familiar">Lote para vivienda familiar</option>
+                                <option value="Terreno para inversión">Terreno para inversión</option>
+                                <option value="Quiero la promoción de inicial en 3 meses">Quiero la promoción de inicial en 3 meses</option>
+                                <option value="Agendar visita">Agendar visita al terreno</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="text-xs tracking-wider font-medium text-emerald-200 block mb-1.5">MENSAJE (OPCIONAL)</label>
+                            <textarea id="mensaje" rows="2" 
+                                      class="w-full bg-white/10 border border-white/30 focus:border-white placeholder:text-white/50 text-white rounded-xl px-4 py-3 outline-none resize-y text-sm" 
+                                      placeholder="Presupuesto aproximado, zona de preferencia..."></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full bg-white hover:bg-emerald-50 transition-all text-emerald-900 font-bold py-3.5 rounded-xl text-base flex items-center justify-center gap-x-2">
+                            <span>ENVIAR Y ABRIR WHATSAPP</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-emerald-950 text-emerald-200 py-10 border-t border-emerald-900">
+        <div class="max-w-6xl mx-auto px-5 sm:px-6 text-sm">
+            <div class="flex flex-col md:flex-row justify-between gap-y-8">
+                <div>
+                    <div class="flex items-center gap-x-2.5 mb-3">
+                        <div class="w-9 h-9 bg-emerald-700 rounded-xl flex items-center justify-center">
+                            <i class="fa-solid fa-mountain text-white"></i>
+                        </div>
+                        <span class="font-bold text-white text-xl tracking-tight">Realia · San José</span>
+                    </div>
+                    <p class="max-w-xs text-emerald-300 text-sm">Urbanización San José – Chincha. Tu lote con título, servicios y financiamiento real.</p>
+                </div>
+                
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-x-10 gap-y-6 text-sm">
+                    <div>
+                        <div class="font-semibold text-white mb-2.5">Explora</div>
+                        <div class="space-y-1.5">
+                            <a href="#terrenos" class="block hover:text-white">Lotes disponibles</a>
+                            <a href="#proyecto" class="block hover:text-white">Proyecto 3D</a>
+                            <a href="#ubicacion" class="block hover:text-white">Ubicación</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-white mb-2.5">Legal</div>
+                        <div class="space-y-1.5 text-emerald-300">
+                            <div>Títulos SUNARP</div>
+                            <div>Contratos seguros</div>
+                            <div>Asesoría incluida</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-white mb-2.5">Contacto</div>
+                        <a href="https://wa.me/51960591552" target="_blank" rel="noopener" class="flex items-center gap-x-2 hover:text-white mb-1">
+                            <i class="fa-brands fa-whatsapp"></i> 
+                            <span>+51 960 591 552</span>
+                        </a>
+                        <div class="text-emerald-400 text-xs">Lun – Sáb • 8am – 7pm</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-10 pt-6 border-t border-emerald-800 text-xs flex flex-col sm:flex-row justify-between items-center gap-y-2 text-emerald-400">
+                <div>© 2026 Realia Grupo Inmobiliario · Urbanización San José</div>
+                <div class="flex gap-x-4">
+                    <span>Privacidad</span>
+                    <span>Términos</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- PROPERTY MODAL -->
+    <div id="property-modal" onclick="if(event.target.id==='property-modal') closeModal()" 
+         class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-[100] flex items-center justify-center p-4">
+        <div onclick="event.stopImmediatePropagation()" class="modal bg-white rounded-3xl max-w-2xl w-full max-h-[90dvh] overflow-hidden shadow-2xl flex flex-col">
+            
+            <div class="flex items-center justify-between px-6 pt-5 pb-3 border-b">
+                <div>
+                    <div id="modal-badge" class="terrain-badge inline-block mb-1"></div>
+                    <h3 id="modal-title" class="text-2xl font-bold text-emerald-950"></h3>
+                    <p id="modal-location" class="text-emerald-700 flex items-center gap-x-1.5 mt-0.5 text-sm">
+                        <i class="fa-solid fa-map-marker-alt"></i> <span></span>
+                    </p>
+                </div>
+                <button onclick="closeModal()" class="text-3xl text-gray-400 hover:text-gray-600 w-10 h-10 flex items-center justify-center">×</button>
+            </div>
+            
+            <div class="overflow-y-auto flex-1 p-6">
+                <div class="rounded-2xl overflow-hidden mb-5 border">
+                    <img id="modal-image" class="w-full h-auto max-h-[280px] object-cover" alt="">
+                </div>
+                
+                <div class="flex flex-wrap gap-x-8 gap-y-3 mb-6">
+                    <div>
+                        <div class="text-xs text-gray-500 tracking-wider">ÁREA</div>
+                        <div id="modal-size" class="text-2xl font-bold text-emerald-900"></div>
+                    </div>
+                    <div>
+                        <div class="text-xs text-gray-500 tracking-wider">PRECIO</div>
+                        <div id="modal-price" class="text-2xl font-bold text-emerald-700"></div>
+                    </div>
+                    <div>
+                        <div class="text-xs text-gray-500 tracking-wider">FINANCIAMIENTO</div>
+                        <div class="inline-flex items-center gap-x-1.5 px-3 py-1 bg-emerald-100 text-emerald-700 text-sm font-semibold rounded-full">
+                            <i class="fa-solid fa-check"></i> Disponible
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mb-5">
+                    <h4 class="font-semibold mb-1.5">Descripción</h4>
+                    <p id="modal-description" class="text-gray-700 text-sm leading-relaxed"></p>
+                </div>
+                
+                <div class="mb-5">
+                    <h4 class="font-semibold mb-2">Características</h4>
+                    <div id="modal-features" class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1.5 text-sm"></div>
+                </div>
+                
+                <div class="bg-emerald-50 border border-emerald-100 rounded-xl p-4 text-sm">
+                    <div class="font-semibold text-emerald-800 mb-1 flex items-center gap-x-2">
+                        <i class="fa-solid fa-info-circle"></i> Información importante
+                    </div>
+                    <p class="text-emerald-700">Título independizado en SUNARP. Inicial desde S/5,000 (fraccionable en 3 meses). 48 cuotas sin intereses.</p>
+                </div>
+            </div>
+            
+            <div class="border-t p-5 bg-gray-50 flex flex-col sm:flex-row gap-3">
+                <button onclick="contactPropertyFromModal()" 
+                        class="flex-1 whatsapp-btn flex items-center justify-center gap-x-2.5 bg-emerald-700 hover:bg-emerald-800 text-white font-bold py-3.5 rounded-2xl transition-all">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    <span>Consultar por WhatsApp</span>
+                </button>
+                <button onclick="closeModal()" 
+                        class="sm:w-auto px-6 py-3.5 border border-gray-300 hover:bg-gray-100 font-semibold rounded-2xl text-gray-700 transition-all">
+                    Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Properties data with real images
+        const properties = [
+            {
+                id: 1,
+                title: "Lote 90 m² – Zona privilegiada",
+                location: "Urbanización San José, Chincha",
+                size: "90 m²",
+                price: "Desde S/ 30,000",
+                priceValue: 30000,
+                description: "Lote ideal para vivienda familiar. Ya demarcado, con habilitación urbana en proceso, acceso a servicios y excelente ubicación cerca a la ciudad. Título de propiedad independizado.",
+                features: [
+                    "Habilitación urbana",
+                    "Servicios de agua y luz",
+                    "Título independizado SUNARP",
+                    "Financiamiento 48 cuotas",
+                    "Inicial desde S/5,000",
+                    "Parque y polideportivo"
+                ],
+                image: "images/terreno-1.jpg"
+            },
+            {
+                id: 2,
+                title: "Lote familiar listo para construir",
+                location: "Urbanización San José, Chincha",
+                size: "90 m² +",
+                price: "Desde S/ 30,000",
+                priceValue: 30000,
+                description: "Perfecto para quienes buscan asegurar su terreno ahora. Demarcado con piedras, vías de acceso, y plusvalía garantizada por la cercanía a Chincha y la Panamericana.",
+                features: [
+                    "Áreas verdes proyectadas",
+                    "Plano de lotización aprobado",
+                    "Título SUNARP",
+                    "Inicial fraccionable 3 meses",
+                    "Cuotas desde S/640",
+                    "Alta plusvalía"
+                ],
+                image: "images/terreno-2.jpg"
+            },
+            {
+                id: 3,
+                title: "Oportunidad de inversión Chincha",
+                location: "Urbanización San José – Chincha Alta",
+                size: "90 m²",
+                price: "Desde S/ 30,000",
+                priceValue: 30000,
+                description: "Gran oportunidad por la promoción actual. Lotes con todos los beneficios: título, servicios, áreas comunes y financiamiento flexible sin intereses.",
+                features: [
+                    "Promoción Fiestas Patrias",
+                    "Inicial en 3 meses s/ intereses",
+                    "Habilitación urbana",
+                    "Título independizado",
+                    "Ideal vivienda o inversión",
+                    "Visitas guiadas disponibles"
+                ],
+                image: "images/hero-aereo.jpg"
+            }
+        ];
+
+        function renderProperties() {
+            const grid = document.getElementById('properties-grid');
+            grid.innerHTML = properties.map(prop => `
+                <div class="property-card bg-white border border-gray-200 rounded-2xl overflow-hidden flex flex-col h-full">
+                    <div class="relative">
+                        <img src="${prop.image}" alt="${prop.title}" class="w-full h-48 sm:h-52 object-cover" loading="lazy">
+                        <div class="absolute top-3 left-3">
+                            <span class="terrain-badge">CHINCHA</span>
+                        </div>
+                        <div class="absolute top-3 right-3 bg-white/95 text-emerald-700 text-[10px] font-bold px-2.5 py-1 rounded-full flex items-center gap-x-1 shadow">
+                            <i class="fa-solid fa-handshake text-xs"></i>
+                            <span>FINANCIAMIENTO</span>
+                        </div>
+                        <div class="absolute bottom-3 right-3 bg-white shadow-lg px-3 py-1.5 rounded-xl">
+                            <div class="text-emerald-800 font-extrabold text-lg leading-none">${prop.price}</div>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-5 flex-1 flex flex-col">
+                        <div>
+                            <div class="font-bold text-lg text-emerald-950 leading-snug">${prop.title}</div>
+                            <div class="flex items-center gap-x-1.5 text-emerald-700 text-sm mt-1">
+                                <i class="fa-solid fa-map-marker-alt text-xs"></i>
+                                <span>${prop.location}</span>
+                            </div>
+                        </div>
+                        <div class="mt-auto pt-4 flex items-center justify-between border-t border-gray-100">
+                            <div>
+                                <div class="text-[10px] text-gray-500 uppercase tracking-wider">Área</div>
+                                <div class="font-semibold text-sm">${prop.size}</div>
+                            </div>
+                            <button onclick="showPropertyModal(${prop.id})" 
+                                    class="px-5 py-2 bg-emerald-700 hover:bg-emerald-800 transition-all text-white text-sm font-bold rounded-xl flex items-center gap-x-1.5">
+                                <span>Ver detalles</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        let currentProperty = null;
+
+        function showPropertyModal(id) {
+            currentProperty = properties.find(p => p.id === id);
+            if (!currentProperty) return;
+
+            document.getElementById('modal-title').innerText = currentProperty.title;
+            document.getElementById('modal-location').querySelector('span').innerText = currentProperty.location;
+            document.getElementById('modal-image').src = currentProperty.image;
+            document.getElementById('modal-size').innerText = currentProperty.size;
+            document.getElementById('modal-price').innerText = currentProperty.price;
+            document.getElementById('modal-description').innerText = currentProperty.description;
+            document.getElementById('modal-badge').innerHTML = '<i class="fa-solid fa-map-marker-alt mr-1"></i> CHINCHA';
+
+            document.getElementById('modal-features').innerHTML = currentProperty.features.map(f => 
+                `<div class="flex items-start gap-x-2 py-0.5">
+                    <i class="fa-solid fa-check-circle text-emerald-600 mt-0.5 text-sm"></i> 
+                    <span class="text-gray-700">${f}</span>
+                </div>`
+            ).join('');
+
+            const modal = document.getElementById('property-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('property-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        function contactPropertyFromModal() {
+            if (!currentProperty) return;
+            const message = `Hola, estoy interesado en el lote: *${currentProperty.title}* (${currentProperty.size}) en ${currentProperty.location}. Precio: ${currentProperty.price}. ¿Me das más información y disponibilidad?`;
+            window.open(`https://wa.me/51960591552?text=${encodeURIComponent(message)}`, '_blank');
+            setTimeout(closeModal, 600);
+        }
+
+        function handleContactForm(e) {
+            e.preventDefault();
+            const nombre = document.getElementById('nombre').value;
+            const telefono = document.getElementById('telefono').value;
+            const interes = document.getElementById('interes').value;
+            const mensaje = document.getElementById('mensaje').value || 'Sin mensaje adicional';
+
+            const fullMessage = `Hola, soy ${nombre}.\nInterés: ${interes}\nTeléfono: ${telefono}\nMensaje: ${mensaje}\n\nQuiero información sobre los lotes en Urbanización San José.`;
+            window.open(`https://wa.me/51960591552?text=${encodeURIComponent(fullMessage)}`, '_blank');
+
+            e.target.reset();
+            const btn = e.target.querySelector('button');
+            const original = btn.innerHTML;
+            btn.innerHTML = '<i class="fa-solid fa-check mr-2"></i> ¡Abriendo WhatsApp!';
+            btn.disabled = true;
+            setTimeout(() => { btn.innerHTML = original; btn.disabled = false; }, 2500);
+        }
+
+        function toggleFaq(btn) {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('i');
+            content.classList.toggle('hidden');
+            icon.classList.toggle('fa-chevron-down');
+            icon.classList.toggle('fa-chevron-up');
+        }
+
+        function closeMobile() {
+            document.getElementById('mobile-menu').classList.add('hidden');
+            const icon = document.getElementById('mobile-menu-btn').querySelector('i');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+
+        // Init
+        function init() {
+            // Navbar scroll
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                navbar.classList.toggle('nav-scrolled', window.scrollY > 40);
+            });
+
+            // Mobile menu
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileBtn.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.replace('fa-times', 'fa-bars');
+                } else {
+                    icon.classList.replace('fa-bars', 'fa-times');
+                }
+            });
+
+            // Escape key
+            document.addEventListener('keydown', e => {
+                if (e.key === 'Escape') closeModal();
+            });
+
+            renderProperties();
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>
